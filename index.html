@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+    <div class="main">
+        <div class="sideBar" id="sideBar">
+            <label>Shapes</label>
+            <div class="shape" onclick="ChangeActiveClass('Rectangle')" id="Rectangle">
+                <img src="images/icons8-rectangle-48.png">
+                <label>Rectangle</label>
+            </div>
+            <div class="shape" onclick="ChangeActiveClass('Circle')" id="Circle">
+                <img src="images/icons8-circle-32.png">
+                <label>Circle</label>
+            </div>
+            <div class="shape" onclick="ChangeActiveClass('Triangle')" id="Triangle">
+                <img src="images/icons8-triangle-24.png">
+                <label>Triangle</label>
+            </div>
+            <div class="fill-color">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Fill Color</label>
+            </div>
+            <label>Options</label>
+            <div class="option active" onclick ="ChangeActiveClass('brush')" id="brush">
+                <i class="fa-solid fa-paint-brush"></i>
+                <label>Brush</label>
+            </div>
+            <div class="option" onclick ="ChangeActiveClass('Eraser')" id="Eraser">
+                <i class="fa-solid fa-eraser"></i>
+                <label>Erase</label>
+            </div>
+            <label>Colors</label>
+            <div>
+                <ul class="colors" style="list-style-type: none;">
+                    <li onclick="ChangeColor('white')" id="white" name="color"></li>
+                    <li class="selectedColor" onclick="ChangeColor('black')" id="black" name="color"></li>
+                    <li onclick="ChangeColor('green')" id="green" name="color"></li>
+                    <li onclick="ChangeColor('blue')" id="blue" name="color"></li>
+                    <li onclick="ChangeColor('yellow')" id="yellow" name="color"></li>
+                </ul>
+            </div>
+            <label>Size</label>
+            <input type="range" id="slider" min="1" max="100" value="1" class="slider">
+            <span>Size:<span id="size">1</span></span>
+	<div>
+<button class="btnRedo">Redo</button>
+            <button class="btnUndo">Undo</button>
+</div>
+	    
+            <button class="btnClearCanvas">Clear Board</button>
+	        <button class="btnSave">Save</button>
+        </div>
+        <div class="board">
+            <canvas></canvas>
+        </div>
+    </div>
+</body>
+</html> 
